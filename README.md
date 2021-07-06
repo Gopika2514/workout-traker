@@ -1,10 +1,11 @@
 # workout-tracker
 
 # Links:
-## Heroku link: https://mysterious-dawn-39842.herokuapp.com/
-https://github.com/Gopika2514/workout-traker
+### Heroku link: https://mysterious-dawn-39842.herokuapp.com/
 
+### Git repo: https://github.com/Gopika2514/workout-traker
 
+### Git site: https://gopika2514.github.io/workout-traker/
 
 
 For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
