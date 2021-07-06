@@ -34,6 +34,13 @@ To deploy an application with a MongoDB database to Heroku, you'll need to set u
 
   * [Deploy with Heroku and MongoDB Atlas](../04-Important/MongoAtlas-Deploy.md)
 
+## Mock-Up
 
+The following screenshots demonstrates the application functionality results:
+
+
+![application first page](./public/images/1.png)
+
+![1 just used agrreate method to be able to add fields to the table and return that . I also use add field key to help as the field call “totalDuration” and for this field i did a sumation of the duration of exercises of each workout.](./public/images/2.png)
 
 
