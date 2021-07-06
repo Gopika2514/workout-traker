@@ -1,5 +1,10 @@
 # workout-tracker
 
+# Links:
+## Heroku link: https://mysterious-dawn-39842.herokuapp.com/
+https://github.com/Gopika2514/workout-traker
+
+
 
 
 For this assignment, you'll create a workout tracker. You have already been provided with the front end code in the `Develop` folder. This assignment will require you to create Mongo database with a Mongoose schema and handle routes with Express.
@@ -42,5 +47,34 @@ The following screenshots demonstrates the application functionality results:
 ![application first page](./public/images/1.png)
 
 ![1 just used agrreate method to be able to add fields to the table and return that . I also use add field key to help as the field call “totalDuration” and for this field i did a sumation of the duration of exercises of each workout.](./public/images/2.png)
+
+### Update Application Code for MongoDB Connection
+
+Next and last, you'll update the application's code to accommodate the MongoDB connection.
+
+1. In VS Code, navigate to your application and locate where you connect to your database. Once you find it, update it so it looks like the following code:
+
+   ```js
+   mongoose.connect(
+     process.env.MONGODB_URI || 'mongodb://localhost/deep-thoughts',
+     {
+       useNewUrlParser: true,
+       useUnifiedTopology: true,
+       useCreateIndex: true,
+       useFindAndModify: false
+     }
+   );
+   ```
+
+2. With this code in place, the `mongoose.connect()` command will attempt to use the environment variable first. If it's running on Heroku, it will find that variable and use it. If it's running locally on your machine, it won't find that variable and will fall back to use your local database connection instead.
+
+3. Save your code and use the following Git commands to add, commit, and push it to Heroku:
+
+   ```bash
+   git add -A
+   git commit -m 'deploying'
+   # make sure you're pushing from your local main branch!
+   git push heroku main
+   ```
 
 
