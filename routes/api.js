@@ -13,14 +13,26 @@ router.get("/api/workouts", (req, res) => {
                 total += e.duration;
             });
             workout.totalDuration = total;
-           
+
         });
-       
+
 
         res.json(dbWorkout);
-    }).catch(err => {
-        res.json(err);
-    });
+    })
+    // db.Workout.aggregate([
+    //     {
+    //         $addFields: {
+    //             totalDuration: {
+    //                 $sum: '$exercises.duration'
+    //             }
+    //         }
+    //     }
+    // ]).then(dbWorkout => {
+    //     res.json(dbWorkout)
+    // })
+        .catch (err => {
+            res.json(err);
+        });
 });
 
 // add exercise
